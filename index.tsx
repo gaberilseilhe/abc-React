@@ -1,23 +1,16 @@
-import { Image, StyleSheet, Platform, Text } from 'react-native';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import C1, { Cabecalho, Corpo, Rodape } from '@/components/C1'
+import LoginScreen from '@/components/C1';
 
 export default function HomeScreen() {
   return (
-    // <C1/>
-    <view> <Cabecalho />
-      <br />
-      <Corpo />
-      <br />
-      <Rodape />
-    </view>
+    <View style={{ backgroundColor: 'orange', flex: 1 }}> 
+      <LoginScreen />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-
+  // Aqui você pode adicionar mais estilos, caso necessário
 });

@@ -1,56 +1,57 @@
-import { Button, Text, TextInput, View } from 'react-native';
+import React from 'react';
+import { Button, Text, TextInput, View, StyleSheet } from 'react-native';
 
-//<View><label htmlFor="i1">E-mail</label>;
-//<input name=i1 type="email"></input></View>;
-//
-//<br />
-//
-//<View><label htmlFor="i2">Password</label>;
-//<input name=i2 type="password"></input></View>;
+export default function LoginScreen() {
+    function handleLogin() {}
 
-//<button>Entrar</button>
-
-/*export default function C1() {
     return (
-        <View>
-            <Text>
-                <br /><br /><br /><br /><br /><br />
-                <label htmlFor="i1">E-mail</label><br />
-                <input name="i1" type="email" />
-                <br /><br />
-                <label htmlFor="i2">Password</label><br />
-                <input name="i2" type="password" />
-                <br /><br />
-                <button>Entrar</button>
-            </Text>
+        <View style={styles.container}>
+            <Text style={styles.header}>Cadastre-se</Text>
+            <Text style={{fontSize:15, fontWeight: 'bold', }} >Seu nome</Text>
+            <TextInput
+        
+                style={styles.input}
+                placeholder="Digite seu nome"
+            />
+              <Text style={{fontSize:15, fontWeight: 'bold', }} >Seu E-mail</Text>
+            <TextInput
+                style={styles.input}
+                placeholder="Digite seu e-mail"
+                keyboardType="email-address"
+            />  <Text style={{fontSize:15, fontWeight: 'bold', }} >Sua Senha</Text>
+            <TextInput
+                style={styles.input}
+                placeholder="Digite sua senha"
+                
+            />
+
+            <Button title="Entrar" color="#007BFF" />
         </View>
     );
-}*/
-
-export function Cabecalho() {
-    return (
-        <View style={{ alignItems: "center", backgroundColor: 'red', marginBottom: 20, padding: 10 }}>
-            <Text style={{ fontSize: 26, fontWeight: "bold" }}>
-                Cabeçalho
-            </Text>
-        </View>
-    )
 }
 
-export function Corpo() {
-    return (
-        <View style={{ alignItems: "center", backgroundColor: 'green', marginBottom: 20, padding: 15 }}>
-            <Text>
-                Corpo
-            </Text>
-        </View>
-    )
-}
-
-export function Rodape() {
-    return (
-        <View style={{ alignItems: "center", backgroundColor: 'blue', marginBottom: 20, padding: 10 }}>
-            <Text>Rodapé</Text>
-        </View>
-    )
-}
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 20,
+        backgroundColor: '#f0f8ff',
+    },
+    header: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 30,
+    },
+    input: {
+        width: '100%',
+        height: 50,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#ddd',
+        marginBottom: 15,
+        paddingLeft: 15,
+        fontSize: 16,
+    },
+});
