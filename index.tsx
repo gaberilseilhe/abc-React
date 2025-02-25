@@ -29,7 +29,7 @@ export default function App() {
 
   return (
 
-    <View style={styles.v1} >
+    
       <View style={styles.Viewprincipal}>
         <Text style={styles.title}>Calculadora de IMC</Text>
         <TextInput
@@ -47,11 +47,10 @@ export default function App() {
           onChangeText={setHeight}
         />
         <View>
-          <TouchableOpacity
-            style={styles.Button}
-            onPress={calculateBMI}
+          <TouchableOpacity style={styles.botao}
+          onPress={calculateBMI}
           >
-            <Text  style={styles.TextButton} > Calcular</Text>
+            <Text style={styles.texto}>Calcular</Text>
           </TouchableOpacity>
         </View>
         {bmi && (
@@ -60,8 +59,6 @@ export default function App() {
             <Text style={styles.resultText}>{category}</Text>
           </View>
         )}
-
-      </View>
     </View>
 
 
@@ -72,11 +69,14 @@ const styles = StyleSheet.create({
   Viewprincipal: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#1E90FF',
-    margin: 20,
-    borderWidth: 0.1,
-    height: 760
+    paddingVertical:30,
+    marginHorizontal:30,
+    backgroundColor: '#A9A9A9',
+    margin: 1,
+    borderWidth: 1,
+    borderRadius: 20,
+    height: 275,
+    marginTop:260,
   },
   title: {
     fontSize: 24,
@@ -84,13 +84,17 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   input: {
+    fontWeight: 'bold',
     width: '90%',
     height: 50,
     borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 5,
+    borderColor: '#fff',
+    borderRadius: 10,
+    margin:5,
     paddingHorizontal: 10,
     marginBottom: 10,
+    backgroundColor: '#DCDCDC',
+    shadowRadius: 7,
   },
   result: {
     marginTop: 20,
@@ -104,10 +108,19 @@ const styles = StyleSheet.create({
 
     backgroundColor: 'gray'
   },
-  Button: {
-
+  botao: {
+    backgroundColor: '#6200EE',
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop:8
   },
-  TextButton: {
-
+  texto: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
+  
 });
